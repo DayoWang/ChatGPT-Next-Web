@@ -1,5 +1,3 @@
-import Callback from "./components/callback";
-
 export const OWNER = "Yidadaa";
 export const REPO = "ChatGPT-Next-Web";
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
@@ -20,8 +18,6 @@ export enum Path {
   NewChat = "/new-chat",
   Masks = "/masks",
   Auth = "/auth",
-  Login = "/login",
-  Callback = "/callback",
 }
 
 export enum ApiPath {

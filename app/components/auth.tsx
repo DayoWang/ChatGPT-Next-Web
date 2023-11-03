@@ -10,13 +10,25 @@ import BotIcon from "../icons/bot.svg";
 import { useEffect } from "react";
 import { getClientConfig } from "../config/client";
 
+import { Guard } from "@authing/guard-react18";
+import "@authing/guard-react18/dist/esm/guard.min.css";
+
+import { guardOptions } from "../config/authing";
+
 export function AuthPage() {
   const navigate = useNavigate();
   const access = useAccessStore();
 
   const goHome = () => navigate(Path.Home);
+  const resetAccessCode = () => {
+    access.updateCode("");
+    access.updateToken("");
+  }; // Reset access code to empty string
   const goChat = () => navigate(Path.Chat);
-  const resetAccessCode = () => { access.updateCode(""); access.updateToken(""); }; // Reset access code to empty string
+  const guard = new Guard(guardOptions);
+  console.log("guard instance: ", guard);
+  // 跳转到 Authing 托管页面登录
+  const goAuthingLogin = () => guard.startWithRedirect();
 
   useEffect(() => {
     if (getClientConfig()?.isApp) {
@@ -33,16 +45,15 @@ export function AuthPage() {
 
       <div className={styles["auth-title"]}>{Locale.Auth.Title}</div>
       <div className={styles["auth-tips"]}>{Locale.Auth.Tips}</div>
-
-      <input
-        className={styles["auth-input"]}
-        type="password"
-        placeholder={Locale.Auth.Input}
-        value={access.accessCode}
-        onChange={(e) => {
-          access.updateCode(e.currentTarget.value);
-        }}
-      />
+      <div className={styles["auth-actions"]}>
+        <br />
+        <IconButton
+          text={Locale.Auth.Login}
+          type="primary"
+          onClick={goAuthingLogin}
+        />
+        <br />
+      </div>
       {!access.hideUserApiKey ? (
         <>
           <div className={styles["auth-tips"]}>{Locale.Auth.SubTips}</div>

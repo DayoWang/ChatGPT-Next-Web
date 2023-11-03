@@ -15,6 +15,35 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@authing/guard-react18@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@authing/guard-react18/-/guard-react18-5.3.1.tgz#04d8580a82b11d3df16db5f9699e0c58ec83c02e"
+  integrity sha512-nbnq9G+gL3aVDgtJm0Kraylfd7dT5jOHVjRgx6DL92tU0PoEJFKLKMGeFtV7xIwX7wgYBGGQcwt30sM8gwChwA==
+  dependencies:
+    "@authing/guard-shim-react18" "^5.3.1"
+    react "^18.0.0"
+
+"@authing/guard-shim-react18@^4.5.0-alpha.3":
+  version "4.5.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@authing/guard-shim-react18/-/guard-shim-react18-4.5.0-alpha.3.tgz#5d6428d97fdb8bc41172905b1a30cc59ade161b5"
+  integrity sha512-N5Pq5lDoaRh+ParvnC/z1Ahxz7njtWkO26JFOe3LTNHkFsCCgkvBR3sF4pyxzLIoeqGdYCl/ps+IVtXaEVVnVA==
+
+"@authing/guard-shim-react18@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@authing/guard-shim-react18/-/guard-shim-react18-5.3.1.tgz#61a235ad33b31a4bc6a01e11ff259c7ed1745f22"
+  integrity sha512-bswfOx/zp0fDX0gtaxhVeNLP+52uM9Lh/Xrcb7FS1fJQrdNwJjrPDoPcrv4FgeeAy+e7Y4thlwkgzB2EyNSTzA==
+  dependencies:
+    "@authing/react18-ui-components" "^4.5.0-alpha.3"
+    react "^18.0.0"
+    react-dom "^18.0.0"
+
+"@authing/react18-ui-components@^4.5.0-alpha.3":
+  version "4.5.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@authing/react18-ui-components/-/react18-ui-components-4.5.0-alpha.3.tgz#197798716f487c1b80b24344e87edc73daddb59d"
+  integrity sha512-O9FA+BHSZeycpik39LZiSPh1KT2vGRNPrlHooKqxyK3jK0uJPu3THIW2kVxvnq89K1fPNFNNdGr/lXbuu7zdVg==
+  dependencies:
+    "@authing/guard-shim-react18" "^4.5.0-alpha.3"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -5039,7 +5068,7 @@ randombytes@^2.1.0:
   dependencies:
     safe-buffer "^5.1.0"
 
-react-dom@^18.2.0:
+react-dom@^18.0.0, react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -5105,7 +5134,7 @@ react-router@6.15.0:
   dependencies:
     "@remix-run/router" "1.8.0"
 
-react@^18.2.0:
+react@^18.0.0, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
